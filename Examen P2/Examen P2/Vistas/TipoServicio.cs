@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Examen_P2.Controladores;
+
 
 namespace Examen_P2.Vistas
 {
@@ -15,6 +17,12 @@ namespace Examen_P2.Vistas
         public TipoServicio()
         {
             InitializeComponent();
+            TipoSoporteController controlador = new TipoSoporteController(this);
+        }
+
+        private void TipoServicio_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

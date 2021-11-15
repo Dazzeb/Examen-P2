@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Examen_P2.Controladores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace Examen_P2.Vistas
         public EstadoView()
         {
             InitializeComponent();
+            EstadoController controlador = new EstadoController(this);
+        }
+
+        private void EstadoView_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

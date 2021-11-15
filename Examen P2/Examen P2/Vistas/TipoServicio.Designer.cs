@@ -29,19 +29,20 @@ namespace Examen_P2.Vistas
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SoporteDataGridView = new System.Windows.Forms.DataGridView();
+            this.bCancelar = new System.Windows.Forms.Button();
+            this.bEliminar = new System.Windows.Forms.Button();
+            this.bAgregar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.SoporteDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -99,73 +100,56 @@ namespace Examen_P2.Vistas
             this.comboBox1.Size = new System.Drawing.Size(229, 21);
             this.comboBox1.TabIndex = 18;
             // 
-            // button5
+            // SoporteDataGridView
             // 
-            this.button5.Location = new System.Drawing.Point(395, 151);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(67, 38);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Cancelar";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(322, 151);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(67, 38);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(249, 151);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(67, 38);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Guardar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(176, 151);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(67, 38);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(103, 151);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 38);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Nuevo";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.SoporteDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 236);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(602, 96);
-            this.dataGridView1.TabIndex = 24;
+            this.SoporteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SoporteDataGridView.Location = new System.Drawing.Point(2, 240);
+            this.SoporteDataGridView.Name = "SoporteDataGridView";
+            this.SoporteDataGridView.Size = new System.Drawing.Size(561, 87);
+            this.SoporteDataGridView.TabIndex = 26;
+            // 
+            // bCancelar
+            // 
+            this.bCancelar.Location = new System.Drawing.Point(328, 157);
+            this.bCancelar.Name = "bCancelar";
+            this.bCancelar.Size = new System.Drawing.Size(67, 38);
+            this.bCancelar.TabIndex = 25;
+            this.bCancelar.Text = "Cancelar";
+            this.bCancelar.UseVisualStyleBackColor = true;
+            // 
+            // bEliminar
+            // 
+            this.bEliminar.Location = new System.Drawing.Point(255, 157);
+            this.bEliminar.Name = "bEliminar";
+            this.bEliminar.Size = new System.Drawing.Size(67, 38);
+            this.bEliminar.TabIndex = 24;
+            this.bEliminar.Text = "Eliminar";
+            this.bEliminar.UseVisualStyleBackColor = true;
+            // 
+            // bAgregar
+            // 
+            this.bAgregar.Location = new System.Drawing.Point(182, 157);
+            this.bAgregar.Name = "bAgregar";
+            this.bAgregar.Size = new System.Drawing.Size(67, 38);
+            this.bAgregar.TabIndex = 23;
+            this.bAgregar.Text = "Agregar";
+            this.bAgregar.UseVisualStyleBackColor = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // TipoServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 330);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(563, 327);
+            this.Controls.Add(this.SoporteDataGridView);
+            this.Controls.Add(this.bCancelar);
+            this.Controls.Add(this.bEliminar);
+            this.Controls.Add(this.bAgregar);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -174,7 +158,9 @@ namespace Examen_P2.Vistas
             this.Controls.Add(this.label1);
             this.Name = "TipoServicio";
             this.Text = "TipoServicio";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.TipoServicio_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.SoporteDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,17 +168,16 @@ namespace Examen_P2.Vistas
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.DataGridView SoporteDataGridView;
+        public System.Windows.Forms.Button bCancelar;
+        public System.Windows.Forms.Button bEliminar;
+        public System.Windows.Forms.Button bAgregar;
+        public System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

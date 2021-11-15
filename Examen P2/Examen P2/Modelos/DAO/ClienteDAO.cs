@@ -9,69 +9,45 @@ using System.Threading.Tasks;
 
 namespace Examen_P2.Modelos.DAO
 {
-    public class UsuarioDAO : Conexion
+    public class ClienteDAO : Conexion
     {
         SqlCommand comando = new SqlCommand();
-        public bool ValidarUsuario(Usuario user)
-        {
-            bool Valido = false;
-            
 
+        public bool InsertarNuevoCliente(Cliente cliente)
+        {
+            bool inserto = false;
             try
             {
                 StringBuilder sql = new StringBuilder();
-              sql.Append(" SELECT 1 FROM NUsuario WHERE NUsuario =@NUsuario AND Clave = @Clave ").ToString();
+                sql.Append(" INSERT INTO Cliente ");
+                sql.Append(" VALUES (@Identidad, @Nombre, @Email, @Direccion); ");
 
                 comando.Connection = Miconexion;
                 Miconexion.Open();
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = sql.ToString();
-                comando.Parameters.Add("@NUsuario", SqlDbType.NVarChar, 50).Value = user.NUsuario;
-                comando.Parameters.Add("@Clave", SqlDbType.NVarChar, 50).Value = user.Clave;
-                Valido = Convert.ToBoolean(comando.ExecuteScalar());
-            }
-            catch (Exception)
-            {
-
-            }
-            return Valido;
-
-
-        }
-
-       public bool InsertarNuevoUsuario(Usuario user)
-        {
-            try
-            {
-                StringBuilder sql = new StringBuilder();
-                sql.Append(" INSERT INTO NUsuario ");
-                sql.Append(" VALUES (@NUsuario, @Clave, @EsAdmin); ");
-
-                comando.Connection = Miconexion;
-                Miconexion.Open();
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = sql.ToString();
-                comando.Parameters.Add("@NUsuario", SqlDbType.NVarChar, 50).Value = user.NUsuario;
-                comando.Parameters.Add("@Clave", SqlDbType.NVarChar, 50).Value = user.Clave;
-                comando.Parameters.Add("@EsAdmin", SqlDbType.Bit).Value = user.EsAdmin;
+                comando.Parameters.Add("@Identidad", SqlDbType.NVarChar, 50).Value = cliente.Identidad;
+                comando.Parameters.Add("@Nombre", SqlDbType.NVarChar, 50).Value = cliente.Nombre;
+                comando.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = cliente.Email;
+                comando.Parameters.Add("@Direccion", SqlDbType.NVarChar, 500).Value = cliente.Direccion;
                 comando.ExecuteNonQuery();
+                inserto = true;
                 Miconexion.Close();
-                return true;
-                
-
             }
             catch (Exception)
             {
-                return false;
+                inserto = false;
             }
+            return inserto;
         }
-        public DataTable GetUsuarios()
+
+        public DataTable GetClientes()
         {
             DataTable dt = new DataTable();
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" SELECT * FROM NUsuario ");
+                sql.Append(" SELECT * FROM Cliente ");
 
                 comando.Connection = Miconexion;
                 Miconexion.Open();
@@ -81,30 +57,31 @@ namespace Examen_P2.Modelos.DAO
                 dt.Load(dr);
                 Miconexion.Close();
             }
-            catch (Exception)
+            catch (Exception )
             {
             }
             return dt;
         }
 
-        public bool ActualizarUsuario(Usuario user)
+        public bool ActualizarCliente(Cliente cliente)
         {
             bool modifico = false;
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" UPDATE NUsuario ");
-                sql.Append(" SET NUsuario = @NUsuario, Clave = @Clave, EsAdmin = @EsAdmin  ");
+                sql.Append(" UPDATE CLIENTE ");
+                sql.Append(" SET IDENTIDAD = @Identidad, Nombre = @Nombre, EMAIL = @Email, Direccion = @Direccion");
                 sql.Append(" WHERE ID = @ID; ");
 
                 comando.Connection = Miconexion;
                 Miconexion.Open();
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = sql.ToString();
-                comando.Parameters.Add("@Id", SqlDbType.Int).Value = user.ID;
-                comando.Parameters.Add("@Nombre", SqlDbType.NVarChar, 50).Value = user.NUsuario;
-                comando.Parameters.Add("@Clave", SqlDbType.NVarChar, 50).Value = user.Clave;
-                comando.Parameters.Add("@EsAdministrador", SqlDbType.Bit).Value = user.EsAdmin;
+                comando.Parameters.Add("@ID", SqlDbType.Int).Value = cliente.ID;
+                comando.Parameters.Add("@Identidad", SqlDbType.NVarChar, 20).Value = cliente.Identidad;
+                comando.Parameters.Add("@Nombre", SqlDbType.NVarChar, 70).Value = cliente.Nombre;
+                comando.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = cliente.Email;
+                comando.Parameters.Add("@Direccion", SqlDbType.NVarChar, 100).Value = cliente.Direccion;
                 comando.ExecuteNonQuery();
                 modifico = true;
                 Miconexion.Close();
@@ -123,7 +100,7 @@ namespace Examen_P2.Modelos.DAO
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" DELETE FROM NUsuario ");
+                sql.Append(" DELETE FROM Cliente ");
                 sql.Append(" WHERE ID = @ID; ");
 
                 comando.Connection = Miconexion;
@@ -136,11 +113,14 @@ namespace Examen_P2.Modelos.DAO
                 Miconexion.Close();
 
             }
-            catch (Exception )
+            catch (Exception)
             {
                 return modifico;
             }
             return modifico;
         }
+
+      
+
     }
 }

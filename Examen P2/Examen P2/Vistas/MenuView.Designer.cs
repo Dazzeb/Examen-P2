@@ -232,6 +232,7 @@ namespace Examen_P2.Vistas
             this.toolStripButton2.Size = new System.Drawing.Size(61, 44);
             this.toolStripButton2.Text = "Clientes";
             this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripTabItem6
             // 
@@ -280,6 +281,7 @@ namespace Examen_P2.Vistas
             this.toolStripButton3.Size = new System.Drawing.Size(67, 44);
             this.toolStripButton3.Text = "Servicios";
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripEx4
             // 
@@ -309,6 +311,7 @@ namespace Examen_P2.Vistas
             this.toolStripButton4.Size = new System.Drawing.Size(53, 44);
             this.toolStripButton4.Text = "Estado";
             this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripEx5
             // 
@@ -338,6 +341,7 @@ namespace Examen_P2.Vistas
             this.toolStripButton5.Size = new System.Drawing.Size(49, 44);
             this.toolStripButton5.Text = "Ticket";
             this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripEx6
             // 
@@ -374,6 +378,7 @@ namespace Examen_P2.Vistas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 327);
             this.Controls.Add(this.ribbonControlAdv1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.IsMdiContainer = true;
             this.Name = "MenuView";
             this.Text = "Menu";

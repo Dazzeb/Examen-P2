@@ -30,71 +30,71 @@ namespace Examen_P2.Vistas
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bCancelar = new System.Windows.Forms.Button();
+            this.bEliminar = new System.Windows.Forms.Button();
+            this.bSafe = new System.Windows.Forms.Button();
+            this.bMod = new System.Windows.Forms.Button();
+            this.bNuevo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.IdTextBox = new System.Windows.Forms.TextBox();
+            this.IdentidadTextBox = new System.Windows.Forms.TextBox();
+            this.NombreTextBox = new System.Windows.Forms.TextBox();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
+            this.DireccionTextBox = new System.Windows.Forms.TextBox();
+            this.ClientesDataGridView = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button5
+            // bCancelar
             // 
-            this.button5.Location = new System.Drawing.Point(400, 238);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(67, 38);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Cancelar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.bCancelar.Location = new System.Drawing.Point(400, 238);
+            this.bCancelar.Name = "bCancelar";
+            this.bCancelar.Size = new System.Drawing.Size(67, 38);
+            this.bCancelar.TabIndex = 9;
+            this.bCancelar.Text = "Cancelar";
+            this.bCancelar.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // bEliminar
             // 
-            this.button4.Location = new System.Drawing.Point(327, 238);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(67, 38);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.bEliminar.Location = new System.Drawing.Point(327, 238);
+            this.bEliminar.Name = "bEliminar";
+            this.bEliminar.Size = new System.Drawing.Size(67, 38);
+            this.bEliminar.TabIndex = 8;
+            this.bEliminar.Text = "Eliminar";
+            this.bEliminar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // bSafe
             // 
-            this.button3.Location = new System.Drawing.Point(254, 238);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(67, 38);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Guardar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bSafe.Location = new System.Drawing.Point(254, 238);
+            this.bSafe.Name = "bSafe";
+            this.bSafe.Size = new System.Drawing.Size(67, 38);
+            this.bSafe.TabIndex = 7;
+            this.bSafe.Text = "Guardar";
+            this.bSafe.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // bMod
             // 
-            this.button2.Location = new System.Drawing.Point(181, 238);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(67, 38);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bMod.Location = new System.Drawing.Point(181, 238);
+            this.bMod.Name = "bMod";
+            this.bMod.Size = new System.Drawing.Size(67, 38);
+            this.bMod.TabIndex = 6;
+            this.bMod.Text = "Modificar";
+            this.bMod.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // bNuevo
             // 
-            this.button1.Location = new System.Drawing.Point(108, 238);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 38);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Nuevo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bNuevo.Location = new System.Drawing.Point(108, 238);
+            this.bNuevo.Name = "bNuevo";
+            this.bNuevo.Size = new System.Drawing.Size(67, 38);
+            this.bNuevo.TabIndex = 5;
+            this.bNuevo.Text = "Nuevo";
+            this.bNuevo.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -141,49 +141,49 @@ namespace Examen_P2.Vistas
             this.label5.TabIndex = 14;
             this.label5.Text = "Direccion";
             // 
-            // textBox1
+            // IdTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(181, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(131, 20);
-            this.textBox1.TabIndex = 15;
+            this.IdTextBox.Location = new System.Drawing.Point(181, 54);
+            this.IdTextBox.Name = "IdTextBox";
+            this.IdTextBox.ReadOnly = true;
+            this.IdTextBox.Size = new System.Drawing.Size(131, 20);
+            this.IdTextBox.TabIndex = 15;
             // 
-            // textBox2
+            // IdentidadTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 92);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(244, 20);
-            this.textBox2.TabIndex = 16;
+            this.IdentidadTextBox.Location = new System.Drawing.Point(182, 92);
+            this.IdentidadTextBox.Name = "IdentidadTextBox";
+            this.IdentidadTextBox.Size = new System.Drawing.Size(244, 20);
+            this.IdentidadTextBox.TabIndex = 16;
             // 
-            // textBox3
+            // NombreTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(182, 124);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(244, 20);
-            this.textBox3.TabIndex = 17;
+            this.NombreTextBox.Location = new System.Drawing.Point(182, 124);
+            this.NombreTextBox.Name = "NombreTextBox";
+            this.NombreTextBox.Size = new System.Drawing.Size(244, 20);
+            this.NombreTextBox.TabIndex = 17;
             // 
-            // textBox4
+            // EmailTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(182, 152);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(244, 20);
-            this.textBox4.TabIndex = 18;
+            this.EmailTextBox.Location = new System.Drawing.Point(182, 152);
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(244, 20);
+            this.EmailTextBox.TabIndex = 18;
             // 
-            // textBox5
+            // DireccionTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(182, 178);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(244, 20);
-            this.textBox5.TabIndex = 19;
+            this.DireccionTextBox.Location = new System.Drawing.Point(182, 178);
+            this.DireccionTextBox.Name = "DireccionTextBox";
+            this.DireccionTextBox.Size = new System.Drawing.Size(244, 20);
+            this.DireccionTextBox.TabIndex = 19;
             // 
-            // dataGridView1
+            // ClientesDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 299);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(561, 87);
-            this.dataGridView1.TabIndex = 20;
+            this.ClientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ClientesDataGridView.Location = new System.Drawing.Point(1, 299);
+            this.ClientesDataGridView.Name = "ClientesDataGridView";
+            this.ClientesDataGridView.Size = new System.Drawing.Size(561, 87);
+            this.ClientesDataGridView.TabIndex = 20;
             // 
             // errorProvider1
             // 
@@ -194,25 +194,26 @@ namespace Examen_P2.Vistas
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 387);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ClientesDataGridView);
+            this.Controls.Add(this.DireccionTextBox);
+            this.Controls.Add(this.EmailTextBox);
+            this.Controls.Add(this.NombreTextBox);
+            this.Controls.Add(this.IdentidadTextBox);
+            this.Controls.Add(this.IdTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bCancelar);
+            this.Controls.Add(this.bEliminar);
+            this.Controls.Add(this.bSafe);
+            this.Controls.Add(this.bMod);
+            this.Controls.Add(this.bNuevo);
             this.Name = "ClienteView";
             this.Text = "ClienteView";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ClienteView_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ClientesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -220,23 +221,22 @@ namespace Examen_P2.Vistas
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        public System.Windows.Forms.Button bCancelar;
+        public System.Windows.Forms.Button bEliminar;
+        public System.Windows.Forms.Button bSafe;
+        public System.Windows.Forms.Button bMod;
+        public System.Windows.Forms.Button bNuevo;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.TextBox IdTextBox;
+        public System.Windows.Forms.TextBox IdentidadTextBox;
+        public System.Windows.Forms.TextBox NombreTextBox;
+        public System.Windows.Forms.TextBox EmailTextBox;
+        public System.Windows.Forms.TextBox DireccionTextBox;
+        public System.Windows.Forms.DataGridView ClientesDataGridView;
+        public System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
